@@ -20,4 +20,7 @@ describe('scoreThrows', ()=> {
 	it('radius 1, 6, 15 returns 15 points', function(){
 		expect(scoreThrows([1,6,15])).to.be.equal(15);
 	});
+	it('three darts < radius 5 should give 100 bonus points', function(){
+		expect(scoreThrows([1,1,1])).to.be.equal(130);
+	});
 });

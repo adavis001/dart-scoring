@@ -13,13 +13,16 @@ scoreThrows = function(radius){
 			//console.log(radius[i]);
 			score += 5;
 		}
+		else if(radius[0] <5 && radius[1] <5 && radius[2] <5){
+			score +=43.333;
+		}
 		else if (radius[i] < 5){
 			//console.log(radius[i]);
 			score += 10;
 		}
 	}
-	
-	return score;
+	var totalScore = Math.round(score);
+	return totalScore;
 };
 module.exports = scoreThrows;
 
